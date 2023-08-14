@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox alignment="TOP_CENTER" prefHeight="326.0" prefWidth="480.0" spacing="30.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.guessnumberappdemo.HelloController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+
+    <Label fx:id="welcomeText" prefHeight="28.0" prefWidth="284.0" text="Welcome to Number Guess App">
+      <font>
+         <Font name="Bernard MT Condensed" size="23.0" />
+      </font></Label>
+   <ImageView fitHeight="150.0" fitWidth="200.0" nodeOrientation="RIGHT_TO_LEFT" pickOnBounds="true" preserveRatio="true">
+      <image>
+         <Image url="C:\Users\DELL-PC\OneDrive\Desktop\react Practise\my-app\Java Practice\JavaPractice\GuessNumberAppDemo\src\main\resources\com\example\guessnumberappdemo\Images\tryimage.jpg" />
+      </image>
+   </ImageView>
+   <HBox alignment="TOP_CENTER" prefHeight="100.0" prefWidth="200.0" spacing="20.0">
+      <children>
+         <TextField fx:id="numberInputField" prefHeight="26.0" prefWidth="350.0">
+            <HBox.margin>
+               <Insets left="20.0" />
+            </HBox.margin></TextField>
+         <Button mnemonicParsing="false" onAction="#OnGuessButtonClick" text="Guess">
+            <font>
+               <Font name="Tahoma" size="12.0" />
+            </font>
+         </Button>
+      </children>
+   </HBox>
+   <Label fx:id="hintLabel" alignment="TOP_RIGHT" minWidth="300.0" prefHeight="18.0" prefWidth="0.0" />
+   <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="200.0" spacing="20.0">
+      <children>
+         <Label fx:id="countGuessLabel" alignment="TOP_RIGHT" contentDisplay="CENTER" text="Count : 0" />
+         <Button fx:id="OnRestartClick" alignment="TOP_RIGHT" contentDisplay="CENTER" mnemonicParsing="false" onAction="#OnRestartClick" text="Restart" />
+      </children>
+   </HBox>
+</VBox>
