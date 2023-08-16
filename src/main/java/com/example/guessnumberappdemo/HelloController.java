@@ -6,15 +6,14 @@ import javafx.beans.property.IntegerProperty;
 import javafx.beans.property.SimpleIntegerProperty;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.Alert;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
+import javafx.scene.image.ImageView;
 
 import static jdk.tools.jlink.internal.plugins.PluginsResourceBundle.getMessage;
 
 public class HelloController {
     private final IntegerProperty countDownTime = new SimpleIntegerProperty();
+    public ImageView hintImage;
     int systemGeneratedNumber, guessCount = 0, randomNumber;
     @FXML
     private Label hintLabel, countGuessLabel, timerLabel;
@@ -24,6 +23,7 @@ public class HelloController {
     private Button guessButton, onStartClick;
     private int COUNT_DOWN = 30;
     private boolean stopCountdown = false;
+    String hint ="";
 
 
     @FXML
@@ -39,6 +39,7 @@ public class HelloController {
     }
 
 
+
     public void Counter() {
         guessCount++;
         countGuessLabel.setText("Guess :" + guessCount);
@@ -47,6 +48,13 @@ public class HelloController {
     public int generateRandomNumber() {
         randomNumber = (int) (Math.random() * 100) + 1;
         System.out.println("random number :"+randomNumber);
+
+        hint = new HintProvider().provideHint(randomNumber);
+
+        Tooltip tooltip = new Tooltip();
+        tooltip.setText("Hint: " + hint);
+        Tooltip.install(hintImage, tooltip);
+        this.guessCount = 0;
         return randomNumber;
     }
 

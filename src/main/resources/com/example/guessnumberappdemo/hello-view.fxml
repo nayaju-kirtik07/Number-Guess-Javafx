@@ -15,7 +15,7 @@
       <font>
          <Font name="Bernard MT Condensed" size="23.0" />
       </font></Label>
-   <ImageView fitHeight="150.0" fitWidth="200.0" nodeOrientation="RIGHT_TO_LEFT" pickOnBounds="true" preserveRatio="true">
+   <ImageView fx:id="hintImage" fitHeight="150.0" fitWidth="200.0" nodeOrientation="RIGHT_TO_LEFT" pickOnBounds="true" preserveRatio="true">
       <image>
          <Image url="C:\Users\DELL-PC\OneDrive\Desktop\react Practise\my-app\Java Practice\JavaPractice\GuessNumberAppDemo\src\main\resources\com\example\guessnumberappdemo\Images\tryimage.jpg" />
       </image>
@@ -36,7 +36,7 @@
    <Label fx:id="hintLabel" alignment="TOP_RIGHT" minWidth="300.0" prefHeight="18.0" prefWidth="0.0" />
    <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="200.0" spacing="20.0">
       <children>
-         <Label text="Time Remaining : 0" fx:id="timerLabel"/>
+         <Label fx:id="timerLabel" text="Time Remaining : 0" />
          <Label fx:id="countGuessLabel" alignment="TOP_RIGHT" contentDisplay="CENTER" text="Count : 0" />
          <Button fx:id="onStartClick" alignment="TOP_RIGHT" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onStartClick" text="Start" />
       </children>
