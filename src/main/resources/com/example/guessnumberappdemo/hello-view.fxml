@@ -26,7 +26,7 @@
             <HBox.margin>
                <Insets left="20.0" />
             </HBox.margin></TextField>
-         <Button mnemonicParsing="false" onAction="#OnGuessButtonClick" text="Guess">
+         <Button fx:id="guessButton" mnemonicParsing="false" onAction="#OnGuessButtonClick" text="Guess">
             <font>
                <Font name="Tahoma" size="12.0" />
             </font>
@@ -36,8 +36,9 @@
    <Label fx:id="hintLabel" alignment="TOP_RIGHT" minWidth="300.0" prefHeight="18.0" prefWidth="0.0" />
    <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="200.0" spacing="20.0">
       <children>
+         <Label text="Time Remaining : 0" fx:id="timerLabel"/>
          <Label fx:id="countGuessLabel" alignment="TOP_RIGHT" contentDisplay="CENTER" text="Count : 0" />
-         <Button fx:id="OnRestartClick" alignment="TOP_RIGHT" contentDisplay="CENTER" mnemonicParsing="false" onAction="#OnRestartClick" text="Restart" />
+         <Button fx:id="onStartClick" alignment="TOP_RIGHT" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onStartClick" text="Start" />
       </children>
    </HBox>
 </VBox>
